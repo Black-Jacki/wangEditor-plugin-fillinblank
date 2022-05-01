@@ -1,9 +1,9 @@
 {
-  "name": "@wangeditor/plugin-fillinblank",
+  "name": "wangeditor-plugin-fillinblank",
   "description": "wangeditor fill in blank plugin",
   "version": "1.0.0",
   "main": "index.js",
-  "module": "dist/fill-in-blank.js",
+  "module": "index.js",
   "author": "Zhu Yanghua",
   "license": "MIT",
   "keywords": [

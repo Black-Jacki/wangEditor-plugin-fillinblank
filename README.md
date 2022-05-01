@@ -9,9 +9,9 @@
 ## 安装
 
 ```shell
-npm install @wangeditor/plugin-fillinblank -S
+npm install wangeditor-plugin-fillinblank -S
 or
-yarn add @wangeditor/plugin-fillinblank -S
+yarn add wangeditor-plugin-fillinblank -S
 ```
 
 ## 使用
