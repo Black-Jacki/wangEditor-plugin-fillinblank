@@ -66,9 +66,11 @@ const toolbarConfig: Partial<IToolbarConfig> = {
 
 ```html
 <!--短空格-->
-&nbsp;<input data-w-e-type="fill-blank" width="80px" index="0">&nbsp;
+<input data-w-e-type="fill-blank" width="80px" index="0">
 
 <!--长空格-->
-&nbsp;<input data-w-e-type="fill-blank" width="600px" index="0">&nbsp;
+<input data-w-e-type="fill-blank" width="600px" index="0">
 ```
-index表示这个空格在编辑器里的位置，按从左到右，从上到下的顺序依次累加
+index 表示这个空格在编辑器里的位置，按从左到右，从上到下的顺序依次累加
+
+获取到的是纯html，展示文本时可自定义样式，具体可参考 [wangEditor自定义样式](https://www.wangeditor.com/v5/content.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A0%B7%E5%BC%8F) 
