@@ -4,7 +4,9 @@
 
 [wangEditor](https://www.wangeditor.com/) 插入填空题空格插件，支持直接在提干上输入答案。有长空格和短空格两种长度
 
-![](./img/demo.png)
+![img.png](img1.png)
+![img_4.png](img2.png)
+
 
 ## 安装
 
@@ -13,6 +15,11 @@ npm install wangeditor-plugin-fillinblank -S
 or
 yarn add wangeditor-plugin-fillinblank -S
 ```
+
+## 例子
+[demo1](https://github.com/Black-Jacki/wangEditor-plugin-fillinblank/tree/master/examples/demo1)
+
+[demo2](https://github.com/Black-Jacki/wangEditor-plugin-fillinblank/tree/master/examples/demo2)
 
 ## 使用
 
@@ -49,9 +56,38 @@ const toolbarConfig: Partial<IToolbarConfig> = {
       {
         key: "group-fill-blank",
         title: "填空空格",
-        iconSvg: fillInBlank.icon,
-        menuKeys: ["insertFillBlank", "insertLongFillBlank"],
+        iconSvg: fillInBlank.icon.ICON_SVG,
+        menuKeys: [
+          "insertFillBlank1",
+          "insertFillBlank2",
+          "insertFillBlank3",
+          "insertFillBlank4",
+          "insertFillBlank5",
+          "insertFillBlank6",
+          "insertFillBlank7",
+          "insertFillBlank8",
+          "insertFillBlank9",
+          "insertFillBlank10",
+        ],
       },
+      {
+        key: "group-fill-blank-paren",
+        title: "填空空格",
+        iconSvg: fillInBlank.icon.ICON_PAREN_SVG,
+        menuKeys: [
+          "insertFillBlankParen1",
+          "insertFillBlankParen2",
+          "insertFillBlankParen3",
+          "insertFillBlankParen4",
+          "insertFillBlankParen5",
+          "insertFillBlankParen6",
+          "insertFillBlankParen7",
+          "insertFillBlankParen8",
+          "insertFillBlankParen9",
+          "insertFillBlankParen10",
+        ],
+      },
+      "insertFillBlankRect1",
     ], // “插入”菜单
   },
   // 其他...
