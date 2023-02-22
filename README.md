@@ -4,8 +4,8 @@
 
 [wangEditor](https://www.wangeditor.com/) 插入填空题空格插件，支持直接在提干上输入答案。有长空格和短空格两种长度
 
-![img.png](img1.png)
-![img_4.png](img2.png)
+![img1.png](img/img1.png)
+![img2.png](img/img2.png)
 
 
 ## 安装
