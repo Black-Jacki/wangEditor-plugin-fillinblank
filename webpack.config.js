@@ -63,6 +63,14 @@ module.exports = {
       amd: "@wangeditor/editor",
       root: "wangEditor",
     },
+    "@wangeditor/core": {
+      commonjs: "@wangeditor/core",
+      commonjs2: "@wangeditor/core",
+      amd: "@wangeditor/core",
+      root: "wangEditor",
+    },
+    // "snabbdom": "snabbdom",
+    // "slate": "slate",
   },
   optimization: {
     minimize: true,
