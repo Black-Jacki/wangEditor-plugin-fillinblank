@@ -12,7 +12,7 @@ function withFillBlank<T extends IDomEditor>(editor: T) {
   const newEditor = editor
 
   // 重写 isInline
-  newEditor.isInline = elem => {
+  newEditor.isInline = (elem: any) => {
     const type = DomEditor.getNodeType(elem)
     if (type === "fill-blank") {
       return true
@@ -21,7 +21,7 @@ function withFillBlank<T extends IDomEditor>(editor: T) {
   }
 
   // 重写 isVoid
-  newEditor.isVoid = elem => {
+  newEditor.isVoid = (elem: any) => {
     const type = DomEditor.getNodeType(elem)
     if (type === "fill-blank") {
       return true

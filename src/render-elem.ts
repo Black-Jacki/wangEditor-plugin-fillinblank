@@ -5,15 +5,23 @@
  * @since 2022-3-28
  */
 
-import {h, VNode} from "snabbdom";
+import {h, VNode, VNodeData} from "snabbdom";
 import {IDomEditor, SlateElement} from "@wangeditor/editor";
 
 function renderFillBlank(elem: SlateElement, children: VNode[] | null, editor: IDomEditor): VNode {
   // @ts-ignore
-  const {width} = elem.style;
+  const {shape = "line", style} = elem;
+  const {width} = style;
+
+  const shapeStyle: VNodeData = {
+    line: {style: {width, border: "none", borderBottom: "1px solid #f00", outline: "none"}, readOnly: true},
+    paren: {style: {width, border: "none", outline: "none"}, readOnly: true},
+    rect: {style: {width, border: "1px solid #f00", outline: "none"}, readOnly: true},
+  };
+
   const fillBlankVnode = h(
     "input",
-    {style: {width, border: "none", borderBottom: "1px solid #f00", outline: "none"}, readOnly: true},
+    shapeStyle[shape],
     null
   )
 

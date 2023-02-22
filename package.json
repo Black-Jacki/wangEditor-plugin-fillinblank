@@ -9,6 +9,7 @@
   "keywords": [
     "填空",
     "空格输入框",
+    "富文本",
     "wangeditor"
   ],
   "repository": {
@@ -38,6 +39,6 @@
     "webpack-cli": "^4.9.2"
   },
   "peerDependencies": {
-    "@wangeditor/editor": "^5.0.1"
+    "@wangeditor/editor": ">=0.15.15"
   }
 }

@@ -7,16 +7,18 @@
 import {IDomEditor} from "@wangeditor/editor";
 
 function fillBlankToHtml(elem: any, childrenHtml: string, editor: IDomEditor | undefined): string {
-  
+
   if (!editor) return "";
-  
-  const {width} = elem.style;
+
+  const {shape = "line", style} = elem;
+  const {width} = style;
 
   const children = editor.getElemsByType("fill-blank");
-  // @ts-ignore
-  const index: number = children.findIndex(child => child["key"] === elem["key"]);
 
-  const html: string = `<input data-w-e-type="fill-blank" width="${width}" index="${index}"/>`;
+  const index: number = children.findIndex((child: any) => child["key"] === elem["key"]);
+
+  const html: string = `<input data-w-e-type="fill-blank" width="${width}" index="${index}" shape="${shape}"/>`;
+
   return html;
 }
 

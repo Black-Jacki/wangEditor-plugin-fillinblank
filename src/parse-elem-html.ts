@@ -9,8 +9,10 @@ import uuid from "./uuid";
 
 function parseHtml(elem: any, children: Array<SlateDescendant>, editor: IDomEditor) {
   const width = elem.getAttribute("width") || "";
+  const shape = elem.getAttribute("shape") || "line";
   return {
     type: "fill-blank",
+    shape,
     style: {width},
     key: uuid(),
     children: [{text: ""}], // void node 必须有一个空白 text

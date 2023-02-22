@@ -1,5 +1,6 @@
 /**
- * insert long fill-blank menu
+ * insert fill-blank menu
+ * 矩形框空格
  * @author zyh
  * @version 1.0
  * @since 2022-3-28
@@ -8,13 +9,26 @@
 import {IButtonMenu, IDomEditor, DomEditor, t} from "@wangeditor/core";
 import {SlateTransforms} from "@wangeditor/editor";
 import {Editor} from "slate";
-import {ICON_SVG} from "./icon_svg";
+import {ICON_RECT_SVG} from "./icon_svg";
 import uuid from "../uuid";
 
-class InsertLongFillBlank implements IButtonMenu {
-  readonly title = t("长空格");
-  readonly iconSvg = ICON_SVG;
+class InsertFillBlankParen implements IButtonMenu {
+  readonly title = t("方框空格");
+  readonly iconSvg = ICON_RECT_SVG;
   readonly tag = "button";
+
+  readonly _width = 80;
+
+  constructor(props?: any) {
+    if (!props) return;
+    if (props.width) {
+      this._width = props.width;
+    }
+    if (props.title) {
+      this.title = t(props.title);
+    }
+  }
+
 
   getValue(editor: IDomEditor): string | boolean {
     // 无需获取 val
@@ -29,7 +43,7 @@ class InsertLongFillBlank implements IButtonMenu {
     if (editor.selection == null) return true;
 
     const [match] = Editor.nodes(editor, {
-      match: n => {
+      match: (n: any) => {
         const type = DomEditor.getNodeType(n)
 
         if (type === "pre") return true // 代码块
@@ -49,14 +63,15 @@ class InsertLongFillBlank implements IButtonMenu {
       {text: " "},
       {
         type: "fill-blank",
-        style: {width: "600px"},
+        shape: "rect",
+        style: {width: this._width + "px"},
         key: uuid(),
         children: [{text: ""}], // void node 需要有一个空 text
       },
-      {text: " "}
+      {text: " "},
     ];
     SlateTransforms.insertNodes(editor, fillBlankVnode);
   }
 }
 
-export default InsertLongFillBlank;
+export default InsertFillBlankParen;

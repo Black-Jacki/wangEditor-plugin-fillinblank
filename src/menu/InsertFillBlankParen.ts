@@ -1,6 +1,6 @@
 /**
  * insert fill-blank menu
- * 下横线空格
+ * 两边带括号
  * @author zyh
  * @version 1.0
  * @since 2022-3-28
@@ -9,12 +9,12 @@
 import {IButtonMenu, IDomEditor, DomEditor, t} from "@wangeditor/core";
 import {SlateTransforms} from "@wangeditor/editor";
 import {Editor} from "slate";
-import {ICON_SVG} from "./icon_svg";
+import {ICON_PAREN_SVG} from "./icon_svg";
 import uuid from "../uuid";
 
-class InsertFillBlank implements IButtonMenu {
-  readonly title = t("短横线");
-  readonly iconSvg = ICON_SVG;
+class InsertFillBlankParen implements IButtonMenu {
+  readonly title = t("短括号");
+  readonly iconSvg = ICON_PAREN_SVG;
   readonly tag = "button";
 
   readonly _width = 80;
@@ -60,18 +60,19 @@ class InsertFillBlank implements IButtonMenu {
 
   exec(editor: IDomEditor, value: string | boolean) {
     const fillBlankVnode = [
-      {text: " "},
+      {text: "（", color: "#f00"},
       {
         type: "fill-blank",
-        shape: "line",
+        shape: "paren",
         style: {width: this._width + "px"},
         key: uuid(),
         children: [{text: ""}], // void node 需要有一个空 text
       },
-      {text: " "}
+      {text: "）", color: "#f00"},
+      {text: " "}, // 把颜色还原
     ];
     SlateTransforms.insertNodes(editor, fillBlankVnode);
   }
 }
 
-export default InsertFillBlank;
+export default InsertFillBlankParen;
