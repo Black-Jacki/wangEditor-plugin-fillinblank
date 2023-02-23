@@ -2,7 +2,7 @@
 
 # 介绍
 
-[wangEditor](https://www.wangeditor.com/) 插入填空题空格插件，支持直接在提干上输入答案。有长空格和短空格两种长度
+[wangEditor](https://www.wangeditor.com/) 插入填空题空格插件，支持直接在题干上输入答案。有长空格和短空格两种长度
 
 ![img1.png](img/img1.png)
 ![img2.png](img/img2.png)
@@ -101,11 +101,14 @@ const toolbarConfig: Partial<IToolbarConfig> = {
 空格获取的 HTML 格式如下
 
 ```html
-<!--短空格-->
-<input data-w-e-type="fill-blank" width="80px" index="0">
+<!--横线空格-->
+<input data-w-e-type="fill-blank" width="72px" index="0" shape="line">
 
-<!--长空格-->
-<input data-w-e-type="fill-blank" width="600px" index="0">
+<!--括号空格-->
+<span style="color: rgb(255, 0, 0);">（</span><input data-w-e-type="fill-blank" width="72px" index="0" shape="paren"><span style="color: rgb(255, 0, 0);">）</span>
+
+<!--矩形框空格-->
+<input data-w-e-type="fill-blank" width="28px" index="0" shape="rect">
 ```
 index 表示这个空格在编辑器里的位置，按从左到右，从上到下的顺序依次累加
 

@@ -1754,10 +1754,10 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-wangeditor-plugin-fillinblank@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmmirror.com/wangeditor-plugin-fillinblank/-/wangeditor-plugin-fillinblank-1.0.0.tgz#36085c1b70fe5a0f17be4856509fdc8222772445"
-  integrity sha512-eZ4of/BBaYdKRo1Mi5knYhIs51yJHFSTa3psirrcrvqluAXVa2DJ+IvjRhR7yOzZVPc0W6O1fOVC0bb8+XNDJg==
+wangeditor-plugin-fillinblank@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.npmmirror.com/wangeditor-plugin-fillinblank/-/wangeditor-plugin-fillinblank-1.1.1.tgz#d6ebca12b2406ead5418b041e6c5b92cd04ae124"
+  integrity sha512-oI4S7/uDvEdVMvyaEs3IjMO+3aUsUE/fh0gQbIqlCEXZ4hJHdkPUXzGXRK/IbZ34/lcCWw2ShX/3kB3YvQueYg==
 
 wildcard@^1.1.0:
   version "1.1.2"
